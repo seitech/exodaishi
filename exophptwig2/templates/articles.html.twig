@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">PRICE</th>
+                <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %} 
+                <tr>
+                <th scope="row">{{ article.id }}</th>
+                <td>{{ article.name }}</td>
+                <td>{{ article.price }}</td>
+                <td>{{ article.quantity }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button name="submit" type="submit" class="btn btn-outline-success"><a href="./article-new.php"> ajout de d'article</button>
+    </div> 
+</body>
+</html>
+
+    
